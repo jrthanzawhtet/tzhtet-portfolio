@@ -55,9 +55,9 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: 'Over 1 years of experience in web development, ' +
-        'backend systems, and cloud solutions. Skilled in Angular,' +
-        ' React, Java Spring, and Docker.',
+    description: 'Over 1 years of experience in Web development, ' +
+        'Backend Systems, Banking Systems,and Cloud Solutions. Skilled in Angular,' +
+        ' React, Java , Spring, and Docker.',
     items: [
         {
             company: "MIT Innovation Hub ",
@@ -173,11 +173,91 @@ const Resume = () => {
                     <div className="min-h-[70vh] w-full">
                         {/* experience */}
                         <TabsContent value="experience" className="w-full">
-                            experience
+                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                                <ScrollArea className="h-[400px]">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                        {experience.items.map((item, index) => {
+                                            return (
+                                                <li key={item} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                                                flex flex-col justify-between items-center lg:items-start gap-1">
+                                                    <span className="text-accent">{item.duration}</span>
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px]
+                                                    text-center lg:text-left">{item.position}</h3>
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                        <p className="text-white/60">{item.company}</p>
+                                                    </div>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
                         </TabsContent>
                         {/* education */}
                         <TabsContent value="education" className="w-full">
-                            education
+                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                <h3 className="text-4xl font-bold">{education.title}</h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+                                <ScrollArea className="h-[400px]">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                        {education.items.map((item, index) => {
+                                            return (
+                                                <li key={item} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                                                flex flex-col justify-between items-center lg:items-start gap-1">
+                                                    <span className="text-accent">{item.duration}</span>
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px]
+                                                    text-center lg:text-left">{item.degree}</h3>
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                        <p className="text-white/60">{item.institution}</p>
+                                                    </div>
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
+
+                        </TabsContent>
+                        {/* skills */}
+                        <TabsContent value="skills" className="w-full h-full">
+                            <div className="flex flex-col gap-[30px]">
+                                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
+                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                        {skills.description}
+                                    </p>
+                                </div>
+                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                    {skills.skillList.map((skill, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <TooltipProvider delayDuration={100}>
+                                                    <Tooltip>
+                                                        <TooltipTrigger className="w-full h-[150px] bg[#232329]
+                                                        rounded-xl flex justify-center items-center group">
+                                                            <div className="text-6xl group-hover:text-accent
+                                                            transition-all duration-300">
+                                                                {skill.icon}
+                                                            </div>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <p className="capitalize">{skills.name}</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </TabsContent>
+                        {/* about */}
+                        <TabsContent value="about" className="w-full">
+                            about
                         </TabsContent>
                     </div>
                 </Tabs>
@@ -186,4 +266,4 @@ const Resume = () => {
     )
 }
 
-export  default  Resume;
+export default Resume;

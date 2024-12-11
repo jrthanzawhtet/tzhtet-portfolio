@@ -19,7 +19,7 @@ const Photo = () => {
                     transition={{delay: 2.4,
                         duration: 0.4 ,
                         ease: "easeInOut"}}
-                    className="w-[200px] h-[200px] xl:w-[498px]
+                    className="w-[300px] h-[300px] xl:w-[498px]
                 xl:h-[498px] mix-blend-lighten absolute">
                     <Image
                         src="/assets/tzhtet.png"
