@@ -6,7 +6,7 @@ import Image from "next/image";
 const Photo = () => {
     return (
         <div className="w-full h-full relative">
-            <motion.dev
+            <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
             transition={{delay: 2,
@@ -23,7 +23,7 @@ const Photo = () => {
                 xl:h-[498px] mix-blend-lighten absolute">
                     <Image
                         src="/assets/tzhtet.png"
-                        property
+                        property="true"
                         quality={100}
                         fill
                     alt=""
@@ -40,7 +40,7 @@ const Photo = () => {
                         r="250"
                         stroke="#00ff99"
                         strokeWidth="4"
-                        strokeLinecape="round"
+                        strokelinecape="round"
                         strokeLinejoin="round"
                         initial={{ strokeDasharray: "24 10 0 0" }}
                         animate={{
@@ -54,7 +54,7 @@ const Photo = () => {
                         }}
                     />
                 </motion.svg>
-            </motion.dev>
+            </motion.div>
         </div>
     );
 };

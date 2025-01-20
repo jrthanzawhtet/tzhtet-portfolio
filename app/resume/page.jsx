@@ -64,7 +64,12 @@ const experience = {
         {
             company: "MIT Innovation Hub ",
             position: "Full Stack Developer",
-            duration: "2024 - Present"
+            duration: "2024"
+        },{
+             
+            company: "Fortune International Ltd",
+            position: "Full Stack Developer",
+            duration: "2025 - Present"
         }
     ]
 }
@@ -187,7 +192,7 @@ const Resume = () => {
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => {
                                             return (
-                                                <li key={item} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
+                                                <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl
                                                 flex flex-col justify-between items-center lg:items-start gap-1">
                                                     <span className="text-accent">{item.duration}</span>
                                                     <h3 className="text-xl max-w-[260px] min-h-[60px]

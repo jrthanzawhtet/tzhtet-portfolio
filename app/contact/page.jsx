@@ -19,11 +19,6 @@ import { motion } from "framer-motion";
 
 const info = [
     {
-        icon: <FaPhoneAlt />,
-        title: "Phone",
-        description: "(+95)9 971 471 514",
-    },
-    {
         icon: <FaEnvelope />,
         title: "Email",
         description: "thanzawhtet18@gmail.com",
@@ -31,7 +26,7 @@ const info = [
     {
         icon: <FaMapMarkedAlt />,
         title: "Address",
-        description: "MIT Innovation Hub\n 656, E Gyo Gone St, Yangon",
+        description: "MICT Park\n Bldg 12, Thamine College St, Yangon",
     },
 ];
 
